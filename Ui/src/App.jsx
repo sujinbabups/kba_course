@@ -3,10 +3,10 @@ import { createContext, useState } from 'react'
 // import viteLogo from '/vite.svg'
 
 
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Cards from './components/Cards'
-import View from './components/View'
+// import Navbar from './components/Navbar'
+// import Hero from './components/Hero'
+// import Cards from './components/Cards'
+// import View from './components/View'
 
 import {createBrowserRouter,createRoutesFromElements,RouterProvider,Route} from 'react-router-dom'
 import Homepage from './pages/Homepage'
@@ -20,6 +20,7 @@ function App() {
   const router=createBrowserRouter(
     createRoutesFromElements(
       <>
+      
       {/* <Route path='/' element={MainLayout}> */}
         <Route path='/' element={<Homepage/>}/>
         <Route path='/courses' element={<CoursePage/>}/>
