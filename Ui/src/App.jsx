@@ -15,6 +15,8 @@ import CoursePage from './pages/CoursePage'
 import Notfound from './pages/Notfound'
 import Contact from './pages/Contact'
 import AddCourses from './pages/AddCourses'
+import LearnMore, { courseLoader } from './pages/LearnMore'
+import EditCourse from './pages/EditCourse'
 function App() {
   // const [count, setCount] = useState(0)
   const router=createBrowserRouter(
@@ -24,9 +26,11 @@ function App() {
       {/* <Route path='/' element={MainLayout}> */}
         <Route path='/' element={<Homepage/>}/>
         <Route path='/courses' element={<CoursePage/>}/>
-        <Route path='/*' element={<Notfound/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/add_course' element={<AddCourses/>}/>
+        <Route path='/*' element={<Notfound/>}/>
+        <Route path='/edit-course/:id' element={<EditCourse/>} loader={courseLoader}/>
+        <Route path='/learn_more/:id' element={<LearnMore/>} loader={courseLoader}/>
       {/* </Route> */}
       </>
     )

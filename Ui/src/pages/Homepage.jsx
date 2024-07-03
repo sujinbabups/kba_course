@@ -10,7 +10,7 @@ const Homepage = () => {
     <>
     <Navbar/>
     <Hero/>
-    <Cards/>
+    <Cards isHome={true}/>
     <View/>
     
    </>
