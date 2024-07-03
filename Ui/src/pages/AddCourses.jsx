@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
-import Navbar from '../components/Navbar'
+// import Navbar from '../components/Navbar'
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const AddCourses = () => {
 
 
 const [title,setTitle]=useState('');
 const [courseId,setCourseId]=useState('');
-const [type,setType]=useState('');
+const [type,setType]=useState('Self-Paced');
 const [description,setDescription]=useState('');
 const [price,setPrice]=useState('');
 
@@ -20,6 +21,7 @@ const submitForm=(e)=>{
   }
 
   const res= addCourses(newCourse)
+  toast.success('courses added')
   navigate('/courses')
 
 }
@@ -41,7 +43,7 @@ const addCourses=async(newCourse)=>{
   return (
 
     <>
-    <Navbar/>
+    
     <div>
 
 

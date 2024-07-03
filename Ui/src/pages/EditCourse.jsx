@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Navbar from '../components/Navbar'
+
 import { useLoaderData, useNavigate } from 'react-router-dom';
 
 const EditCourse = () => {
@@ -43,7 +43,7 @@ const updateCourseSubmit=async(updatedCourse)=>{
   return (
 
     <>
-    <Navbar/>
+    
     <div>
 
 

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Crd from './Crd'
+// import {ScaleLoader} from 'react-spinners'
+
 // import rp from './assets/images/rp.png'
 
 // import courses from '../courses.json';

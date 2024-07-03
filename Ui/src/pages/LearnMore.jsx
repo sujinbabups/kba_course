@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+// import React, { useEffect, useState } from 'react'
 import { Link, useLoaderData, useNavigate, useParams } from 'react-router-dom'
 
 import pic from '../assets/images/rp.png'
@@ -124,7 +124,7 @@ const courseLoader=async ({params})=>{
     const data= await res.json()
     return data;
     
-  } 
+  }
 
 // export default LearnMore
 export{LearnMore as default ,courseLoader }

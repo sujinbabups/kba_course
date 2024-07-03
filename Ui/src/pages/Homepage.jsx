@@ -8,7 +8,7 @@ import View from '../components/View'
 const Homepage = () => {
   return (
     <>
-    <Navbar/>
+   
     <Hero/>
     <Cards isHome={true}/>
     <View/>

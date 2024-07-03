@@ -4,16 +4,12 @@ import Cards from '../components/Cards'
 
 const CoursePage = () => {
   return (
-    <>    
-    <Navbar/>
-    <Cards />
-
-   
-  
-
+    <>
+      
+      <Cards />
     </>
 
-    
+
   )
 }
 
