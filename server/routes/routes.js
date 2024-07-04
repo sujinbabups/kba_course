@@ -1,8 +1,9 @@
 const express = require("express");
 const router = express.Router();
 const courses = require("../models/courses");
+const veryfyTocken=require('../middleware/authMiddleware')
 
-router.get("/courses", async (req, res) => {
+router.get("/courses",veryfyTocken, async (req, res) => {
   const details = await courses.find({});
   res.json(details);
 });
