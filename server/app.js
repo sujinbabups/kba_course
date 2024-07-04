@@ -3,6 +3,10 @@ const { mongoose } = require("mongoose");
 const app = express();
 const cors = require("cors");
 const routes = require("./routes/routes");
+const cookieParser = require("cookie-parser");
+app.use(cookieParser).json()
+
+app.use(express.json());
 
 app.use(
   cors({ 
@@ -10,7 +14,7 @@ app.use(
   })
 );
 
-app.use(express.json());
+
 
 app.use("/", routes);
 
