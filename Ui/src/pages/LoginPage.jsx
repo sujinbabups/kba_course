@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-// import { jwtDecode } from "jwt-decode";
+import { jwtDecode } from "jwt-decode";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
@@ -58,8 +58,7 @@ const loginSubmit = async (e) => {
               id="email"
               name="email"
               className="w-full px-3 py-2 border rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              value={email}onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div className="mb-6">
@@ -102,18 +101,18 @@ const loginSubmit = async (e) => {
 };
 
 
-// const userTypeLoader = () => {
-//   const authToken = document.cookie
-//     .split("; ")
-//     .find((row) => row.startsWith("Authtoken"))
-//     ?.split("=")[1];
-//   console.log("documemnt.cookie vslue", authToken);
+const getUserType = () => {
+  const authToken = document.cookie
+    .split("; ")
+    .find((row) => row.startsWith("Authtoken"))
+    ?.split("=")[1];
+  console.log("documemnt.cookie vslue", authToken);
 
-//   const decoded = jwtDecode(authToken);
-//   console.log("decoded", decoded);
-//   const userType = decoded.userType;
-//   console.log("usertype", userType);
-//   return userType;
-// };
+  const decoded = jwtDecode(authToken);
+  console.log("decoded", decoded);
+  const userType = decoded.userType;
+  console.log("usertype", userType);
+  return userType;
+};
 
-export  default LoginPage;
+export   {LoginPage as default,getUserType};

@@ -1,5 +1,6 @@
 import logo from '../assets/images/kbalogo.png'
-import rp from '../assets/images/rp.png'
+
+import Logout from './Logout'
 
 const Navbar=()=>{
     return(
@@ -17,6 +18,8 @@ const Navbar=()=>{
             <a href="/courses" className='ml-20'>Courses</a>
             <a href="contact" className='ml-20'>Contact Us</a>
             <a href="/add_course" className='ml-20'>Add Course</a>
+           <Logout/>
+            
         </div>
         </div>
         

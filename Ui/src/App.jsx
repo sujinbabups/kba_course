@@ -1,12 +1,3 @@
-import { createContext, useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-
-
-// import Navbar from './components/Navbar'
-// import Hero from './components/Hero'
-// import Cards from './components/Cards'
-// import View from './components/View'
 
 import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route } from 'react-router-dom'
 import Homepage from './pages/Homepage'
@@ -38,9 +29,9 @@ function App() {
           <Route path='/courses' element={<CoursePage />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/add_course' element={<AddCourses />} />
-          <Route path='/*' element={<Notfound />} />
           <Route path='/edit-course/:id' element={<EditCourse />} loader={courseLoader} />
           <Route path='/learn_more/:id' element={<LearnMore />} loader={courseLoader} />
+          <Route path='/*' element={<Notfound />} />
         </Route>
       </>
     )

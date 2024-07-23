@@ -52,7 +52,7 @@ router.post("/login", async (req, res) => {
       }
     );
 
-    res.cookie("Authtoken", token);
+    res.cookie("AuthToken", token);
     res.json({
       status: true,
       message: "login success",
@@ -69,7 +69,7 @@ router.post("/login", async (req, res) => {
 
 // Logout
 router.get("/logout", (req, res) => {
-  res.clearCookie("Authtoken");
+  res.clearCookie("AuthToken");
   res.status(200).send("Logout successful");
   return res;
 });
